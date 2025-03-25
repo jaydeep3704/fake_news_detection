@@ -14,6 +14,10 @@ export interface NewsPredictionResponse {
         FAKE: number;
         REAL: number;
     };
+    decision_tree_probabilities:{
+        FAKE: number;
+        REAL: number;
+    }
     prediction: "FAKE" | "REAL"; // Since prediction is either 'FAKE' or 'REAL'
 }
 

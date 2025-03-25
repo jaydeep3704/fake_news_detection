@@ -20,7 +20,6 @@ const Navbar = () => {
 
   const links = [
     {label:"Home",href:"/"},
-    { label: "Predicted Results", href: "#" },
     { label: "Predict by URL", href: "/scrape" },
   ];
 

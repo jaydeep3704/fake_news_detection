@@ -19,6 +19,7 @@ const MLPredictor = (props:{prediction:NewsPredictionResponse}) => {
                         </div>
 
                         {/* Display probabilities for Passive Aggressive */}
+                        <div>
                         <div className="text-lg font-semibold mt-5">Passive Aggressive Probabilities:</div>
                         <ul className='flex flex-col md:flex-row mt-5 rounded-xl overflow-hidden'>
                             {Object.entries(prediction.passive_aggressive_probabilities).map(([key, value]) => (
@@ -26,7 +27,19 @@ const MLPredictor = (props:{prediction:NewsPredictionResponse}) => {
                                     <span className={key === "FAKE" ? 'text-red-600' : 'text-green-600'}>{key}:</span> {value}
                                 </li>
                             ))}
-                        </ul>
+                        </ul>       
+                        </div>
+                        
+                        <div>
+                        <div className="text-lg font-semibold mt-5">Decision Tree Probabilities:</div>
+                        <ul className='flex flex-col md:flex-row mt-5 rounded-xl overflow-hidden'>
+                            {Object.entries(prediction.decision_tree_probabilities).map(([key, value]) => (
+                                <li key={key} className='md:w-1/2 py-2 px-5 font-semibold'>
+                                    <span className={key === "FAKE" ? 'text-red-600' : 'text-green-600'}>{key}:</span> {value}
+                                </li>
+                            ))}
+                        </ul>       
+                        </div>
 
                         {/* Display Final Prediction */}
                         <div className=" text-lg font-semibold mt-5">Final Prediction: <span>{prediction.prediction}</span></div>
