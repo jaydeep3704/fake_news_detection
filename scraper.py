@@ -97,7 +97,7 @@ def scrape_news(url):
     else:
         return {"error": f"Failed to retrieve the page. Status code: {response.status_code}"}
 
-# Example usage:
-url = 'https://www.ndtv.com/india-news/reddit-users-rant-on-moving-to-bengaluru-from-noida-is-viral-says-is-south-indian-7965078'
-result = scrape_news(url)
-print(result)
+# # Example usage:
+# url = 'https://www.ndtv.com/india-news/reddit-users-rant-on-moving-to-bengaluru-from-noida-is-viral-says-is-south-indian-7965078'
+# result = scrape_news(url)
+# print(result)

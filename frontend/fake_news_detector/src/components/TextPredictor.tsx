@@ -6,7 +6,7 @@ import MLPredictor from './MLPredictor';
 
 
 export interface NewsPredictionResponse {
-    naive_bayes_probabilities: {
+    logistic_regression_probabilities: {
         FAKE: number;
         REAL: number;
     };
